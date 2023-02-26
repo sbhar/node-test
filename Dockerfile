@@ -14,4 +14,4 @@ COPY . .
 
 CMD [ "node", "index.js" ]
 
-EXPOSE 4000
+EXPOSE 3000
