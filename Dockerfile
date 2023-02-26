@@ -10,10 +10,8 @@ COPY ["package.json", "package-lock.json*", "./"]
 
 COPY /src/* /app/src/
 
-RUN npm install --production
-
-COPY . .
+RUN npm install
 
 CMD [ "node", "index.js" ]
 
-EXPOSE 3000
+EXPOSE 8080
