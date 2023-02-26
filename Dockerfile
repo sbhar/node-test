@@ -1,21 +1,15 @@
-# stage 1 building the code
-FROM node as builder
-WORKDIR /usr/app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
+# syntax=docker/dockerfile:1
 
-# stage 2
-FROM node
-WORKDIR /usr/app
-COPY package*.json ./
+FROM node:16
+
+ENV NODE_ENV=production
+
+WORKDIR /app
+
+COPY ["package.json", "package-lock.json*", "./"]
+
 RUN npm install --production
 
-COPY --from=builder /usr/app/dist ./dist
+COPY . .
 
-COPY ormconfig.docker.json ./ormconfig.json
-COPY .env .
-
-EXPOSE 4000
-CMD node dist/src/index.js
+CMD [ "node", "index.js" ]
