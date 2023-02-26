@@ -12,7 +12,7 @@ app.use(cors({
   origin: '*'
 }));
 app.use('/myweather', router)
-const port = process.env.PORT != null ? process.env.PORT : 3001
+const port = process.env.PORT != null ? process.env.PORT : 3000
 
 app.get('/', async function (req, res) {
   res.send('Welcome to the news and weather API')
@@ -71,7 +71,7 @@ require('./src/app/routes/auth.routes')(app);
 require('./src/app/routes/user.routes')(app);
 
 // set port, listen for requests
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
