@@ -1,16 +1,24 @@
 {
-  "name": "app-test",
+  "name": "techalchemy-assignment",
   "version": "1.0.0",
-  "description": "",
+  "description": "backendnd for news weather assignment.",
   "main": "index.js",
   "scripts": {
-    "dev": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "Alysson",
-  "license": "MIT",
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "nodemon": "^2.0.12"
+  },
   "dependencies": {
-    "ronin-mocks": "^0.1.11",
-    "ronin-server": "^0.1.3"
+    "axios": "^0.21.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.1"
   }
 }

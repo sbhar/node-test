@@ -8,6 +8,8 @@ WORKDIR /app
 
 COPY ["package.json", "package-lock.json*", "./"]
 
+COPY /src/* /app/
+
 RUN npm install --production
 
 COPY . .
