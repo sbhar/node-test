@@ -16,3 +16,5 @@ RUN powershell -command \
     
 ENV MYSQL C:\\MySQL
 RUN setx PATH /M %PATH%;C:\MySQL\bin
+
+EXPOSE 3306
