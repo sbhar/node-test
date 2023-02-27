@@ -1,3 +1,3 @@
 FROM nanoserver/wamp
 
-EXPOSE 3308
+EXPOSE 80
