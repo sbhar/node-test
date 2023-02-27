@@ -1,3 +1,3 @@
-FROM nanoserver/wamp
+FROM nanoserver/mysql
 
-EXPOSE 80
+EXPOSE 3308
