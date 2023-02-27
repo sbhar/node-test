@@ -1,3 +1,3 @@
-FROM mysql:latest
+FROM nanoserver/wamp
 
-EXPOSE 3306
+EXPOSE 3308
