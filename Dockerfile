@@ -22,7 +22,7 @@ RUN apt-get update \
 RUN { \
     #Set MySQL root password for silent installation
     echo mysql-community-server mysql-community-server/root-pass password ''; \
-    echo mysql-community-server mysql-community-server/re-root-pass password ''>
+    echo mysql-community-server mysql-community-server/re-root-pass password ''> \
     } | debconf-set-selections \
     && apt-get install -y mysql-server \
     && mkdir -p /var/lib/mysql /var/run/mysqld \
